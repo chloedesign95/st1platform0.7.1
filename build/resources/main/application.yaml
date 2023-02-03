@@ -35,17 +35,27 @@ spring:
   # thymeleaf 디커플링
   thymeleaf3.decoupled-logic: true
 
-  # 카카오로그인API 보안설정
+  #Hibernate Naming Strategy
+  spring:
+    jpa:
+      hibernate:
+        naming:
+          implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+          physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+# 카카오로그인API 설정
+  #(통합관제실에서 두사람이 한대의 컴퓨터를 사용하므로 이 기능은 활성화는 되어있되 보류함.)
   security:
     oauth2:
       client:
         registration:
           kakao:
-            client-id: ${KAKAO_OAUTH_CLIENT_ID}
-            client-secret: ${KAKAO_OAUTH_CLIENT_SECRET}
+            client-id: 94d83cf3544358e95e2d36766cbc2d04 #${KAKAO_OAUTH_CLIENT_ID}
+            client-secret: kDH6CoLyCOt3qEShBaEz6Igy46tWlIvV # ${KAKAO_OAUTH_CLIENT_SECRET}
             authorization-grant-type: authorization_code
-            redirect-uri: "{baseUrl}/login/oauth2/code/kakao"
+            redirect-uri: "http://192.168.10.33:9071/login/oauth2/code/kakao"
             client-authentication-method: POST
+            client-name: Kakao
         provider:
           kakao:
             authorization-uri: https://kauth.kakao.com/oauth/authorize
