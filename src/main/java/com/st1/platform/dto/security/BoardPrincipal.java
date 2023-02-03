@@ -48,7 +48,7 @@ public record BoardPrincipal(
     public static BoardPrincipal from(UserAccountDto dto) {
         return BoardPrincipal.of(
                 dto.userId(),
-                dto.userPassword(),
+                dto.userPw(),
                 dto.email(),
                 dto.nickname(),
                 dto.memo()

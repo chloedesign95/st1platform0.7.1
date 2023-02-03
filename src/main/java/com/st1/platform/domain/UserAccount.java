@@ -20,7 +20,7 @@ public class UserAccount extends AuditingFields {
     @Column(length = 50)
     private String userId;
 
-    @Setter @Column(nullable = false) private String userPassword;
+    @Setter @Column(nullable = false, name = "UserPW") private String userPw;
 
     @Setter @Column(length = 100) private String email;
     @Setter @Column(length = 100) private String nickname;
@@ -29,9 +29,9 @@ public class UserAccount extends AuditingFields {
 
     protected UserAccount() {}
 
-    private UserAccount(String userId, String userPassword, String email, String nickname, String memo, String createdBy) {
+    private UserAccount(String userId, String userPw, String email, String nickname, String memo, String createdBy) {
         this.userId = userId;
-        this.userPassword = userPassword;
+        this.userPw = userPw;
         this.email = email;
         this.nickname = nickname;
         this.memo = memo;
@@ -39,12 +39,12 @@ public class UserAccount extends AuditingFields {
         this.modifiedBy = createdBy;
     }
 
-    public static UserAccount of(String userId, String userPassword, String email, String nickname, String memo) {
-        return UserAccount.of(userId, userPassword, email, nickname, memo, null);
+    public static UserAccount of(String userId, String userPw, String email, String nickname, String memo) {
+        return UserAccount.of(userId, userPw, email, nickname, memo, null);
     }
 
-    public static UserAccount of(String userId, String userPassword, String email, String nickname, String memo, String createdBy) {
-        return new UserAccount(userId, userPassword, email, nickname, memo, createdBy);
+    public static UserAccount of(String userId, String userPw, String email, String nickname, String memo, String createdBy) {
+        return new UserAccount(userId, userPw, email, nickname, memo, createdBy);
     }
 
     @Override

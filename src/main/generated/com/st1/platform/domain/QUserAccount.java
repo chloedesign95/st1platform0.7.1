@@ -41,7 +41,7 @@ public class QUserAccount extends EntityPathBase<UserAccount> {
 
     public final StringPath userId = createString("userId");
 
-    public final StringPath userPassword = createString("userPassword");
+    public final StringPath userPw = createString("userPw");
 
     public QUserAccount(String variable) {
         super(UserAccount.class, forVariable(variable));
