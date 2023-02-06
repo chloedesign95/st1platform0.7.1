@@ -2,11 +2,11 @@ package com.st1.platform.service;
 
 import com.st1.platform.domain.Article;
 import com.st1.platform.domain.ArticleComment;
-import com.st1.platform.domain.UserAccount;
+import com.st1.platform.domain.UserInfo;
 import com.st1.platform.dto.ArticleCommentDto;
 import com.st1.platform.repository.ArticleCommentRepository;
 import com.st1.platform.repository.ArticleRepository;
-import com.st1.platform.repository.UserAccountRepository;
+import com.st1.platform.repository.UserInfoRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -23,7 +23,7 @@ public class ArticleCommentService {
 
     private final ArticleRepository articleRepository;
     private final ArticleCommentRepository articleCommentRepository;
-    private final UserAccountRepository userAccountRepository;
+    private final UserInfoRepository userInfoRepository;
 
     @Transactional(readOnly = true)
     public List<ArticleCommentDto> searchArticleComments(Long articleId) {
@@ -36,8 +36,8 @@ public class ArticleCommentService {
     public void saveArticleComment(ArticleCommentDto dto) {
         try {
             Article article = articleRepository.getReferenceById(dto.articleId());
-            UserAccount userAccount = userAccountRepository.getReferenceById(dto.userAccountDto().userId());
-            ArticleComment articleComment = dto.toEntity(article, userAccount);
+            UserInfo userInfo = userInfoRepository.getReferenceById(dto.userInfoDto().userId());
+            ArticleComment articleComment = dto.toEntity(article, userInfo);
 
             if (dto.parentCommentId() != null) {
                 ArticleComment parentComment = articleCommentRepository.getReferenceById(dto.parentCommentId());
@@ -51,7 +51,7 @@ public class ArticleCommentService {
     }
 
     public void deleteArticleComment(Long articleCommentId, String userId) {
-        articleCommentRepository.deleteByIdAndUserAccount_UserId(articleCommentId, userId);
+        articleCommentRepository.deleteByIdAndUserInfo_UserId(articleCommentId, userId);
     }
 
 }

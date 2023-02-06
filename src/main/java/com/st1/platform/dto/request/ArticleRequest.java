@@ -2,7 +2,7 @@ package com.st1.platform.dto.request;
 
 import com.st1.platform.dto.ArticleDto;
 import com.st1.platform.dto.HashtagDto;
-import com.st1.platform.dto.UserAccountDto;
+import com.st1.platform.dto.UserInfoDto;
 
 import java.util.Set;
 
@@ -15,13 +15,13 @@ public record ArticleRequest(
         return new ArticleRequest(title, content);
     }
 
-    public ArticleDto toDto(UserAccountDto userAccountDto) {
-        return toDto(userAccountDto, null);
+    public ArticleDto toDto(UserInfoDto userInfoDto) {
+        return toDto(userInfoDto, null);
     }
 
-    public ArticleDto toDto(UserAccountDto userAccountDto, Set<HashtagDto> hashtagDtos) {
+    public ArticleDto toDto(UserInfoDto userInfoDto, Set<HashtagDto> hashtagDtos) {
         return ArticleDto.of(
-                userAccountDto,
+                userInfoDto,
                 title,
                 content,
                 hashtagDtos

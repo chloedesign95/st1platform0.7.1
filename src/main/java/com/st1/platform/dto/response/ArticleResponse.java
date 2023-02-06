@@ -22,9 +22,9 @@ public record ArticleResponse(
     }
 
     public static ArticleResponse from(ArticleDto dto) {
-        String nickname = dto.userAccountDto().nickname();
+        String nickname = dto.userInfoDto().nickname();
         if (nickname == null || nickname.isBlank()) {
-            nickname = dto.userAccountDto().userId();
+            nickname = dto.userInfoDto().userId();
         }
 
         return new ArticleResponse(
@@ -36,7 +36,7 @@ public record ArticleResponse(
                         .collect(Collectors.toUnmodifiableSet())
                 ,
                 dto.createdAt(),
-                dto.userAccountDto().email(),
+                dto.userInfoDto().email(),
                 nickname
         );
     }

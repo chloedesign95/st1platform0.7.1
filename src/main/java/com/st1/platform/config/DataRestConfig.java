@@ -1,6 +1,6 @@
 package com.st1.platform.config;
 
-import com.st1.platform.domain.UserAccount;
+import com.st1.platform.domain.UserInfo;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurer;
@@ -11,7 +11,7 @@ public class DataRestConfig {
     @Bean
     public RepositoryRestConfigurer repositoryRestConfigurer() {
         return RepositoryRestConfigurer.withConfig((config, cors) ->
-                config.exposeIdsFor(UserAccount.class)
+                config.exposeIdsFor(UserInfo.class)
         );
     }
 

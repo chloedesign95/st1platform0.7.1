@@ -30,7 +30,7 @@ public class ArticleComment extends AuditingFields {
     @Setter
     @JoinColumn(name = "userId")
     @ManyToOne(optional = false)
-    private UserAccount userAccount; // 유저 정보 (ID)
+    private UserInfo userInfo; // 유저 정보 (ID)
 
     @Setter
     @Column(updatable = false)
@@ -46,15 +46,15 @@ public class ArticleComment extends AuditingFields {
 
     protected ArticleComment() {}
 
-    private ArticleComment(Article article, UserAccount userAccount, Long parentCommentId, String content) {
+    private ArticleComment(Article article, UserInfo userInfo, Long parentCommentId, String content) {
         this.article = article;
-        this.userAccount = userAccount;
+        this.userInfo = userInfo;
         this.parentCommentId = parentCommentId;
         this.content = content;
     }
 
-    public static ArticleComment of(Article article, UserAccount userAccount, String content) {
-        return new ArticleComment(article, userAccount, null, content);
+    public static ArticleComment of(Article article, UserInfo userInfo, String content) {
+        return new ArticleComment(article, userInfo, null, content);
     }
 
     public void addChildComment(ArticleComment child) {

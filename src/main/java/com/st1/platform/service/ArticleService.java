@@ -2,13 +2,13 @@ package com.st1.platform.service;
 
 import com.st1.platform.domain.Article;
 import com.st1.platform.domain.Hashtag;
-import com.st1.platform.domain.UserAccount;
+import com.st1.platform.domain.UserInfo;
 import com.st1.platform.domain.constant.SearchType;
 import com.st1.platform.dto.ArticleDto;
 import com.st1.platform.dto.ArticleWithCommentsDto;
 import com.st1.platform.repository.ArticleRepository;
 import com.st1.platform.repository.HashtagRepository;
-import com.st1.platform.repository.UserAccountRepository;
+import com.st1.platform.repository.UserInfoRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
@@ -30,7 +30,7 @@ public class ArticleService {
 
     private final HashtagService hashtagService;
     private final ArticleRepository articleRepository;
-    private final UserAccountRepository userAccountRepository;
+    private final UserInfoRepository userInfoRepository;
     private final HashtagRepository hashtagRepository;
 
     @Transactional(readOnly = true)
@@ -42,8 +42,8 @@ public class ArticleService {
         return switch (searchType) {
             case TITLE -> articleRepository.findByTitleContaining(searchKeyword, pageable).map(ArticleDto::from);
             case CONTENT -> articleRepository.findByContentContaining(searchKeyword, pageable).map(ArticleDto::from);
-            case ID -> articleRepository.findByUserAccount_UserIdContaining(searchKeyword, pageable).map(ArticleDto::from);
-            case NICKNAME -> articleRepository.findByUserAccount_NicknameContaining(searchKeyword, pageable).map(ArticleDto::from);
+            case ID -> articleRepository.findByUserInfo_UserIdContaining(searchKeyword, pageable).map(ArticleDto::from);
+            case NICKNAME -> articleRepository.findByUserInfo_NicknameContaining(searchKeyword, pageable).map(ArticleDto::from);
             case HASHTAG -> articleRepository.findByHashtagNames(
                     Arrays.stream(searchKeyword.split(" ")).toList(),
                     pageable
@@ -67,10 +67,10 @@ public class ArticleService {
     }
 
     public void saveArticle(ArticleDto dto) {
-        UserAccount userAccount = userAccountRepository.getReferenceById(dto.userAccountDto().userId());
+        UserInfo userInfo = userInfoRepository.getReferenceById(dto.userInfoDto().userId());
         Set<Hashtag> hashtags = renewHashtagsFromContent(dto.content());
 
-        Article article = dto.toEntity(userAccount);
+        Article article = dto.toEntity(userInfo);
         article.addHashtags(hashtags);
         articleRepository.save(article);
     }
@@ -78,9 +78,9 @@ public class ArticleService {
     public void updateArticle(Long articleId, ArticleDto dto) {
         try {
             Article article = articleRepository.getReferenceById(articleId);
-            UserAccount userAccount = userAccountRepository.getReferenceById(dto.userAccountDto().userId());
+            UserInfo userInfo = userInfoRepository.getReferenceById(dto.userInfoDto().userId());
 
-            if (article.getUserAccount().equals(userAccount)) {
+            if (article.getUserInfo().equals(userInfo)) {
                 if (dto.title() != null) { article.setTitle(dto.title()); }
                 if (dto.content() != null) { article.setContent(dto.content()); }
 
@@ -106,7 +106,7 @@ public class ArticleService {
                 .map(Hashtag::getId)
                 .collect(Collectors.toUnmodifiableSet());
 
-        articleRepository.deleteByIdAndUserAccount_UserId(articleId, userId);
+        articleRepository.deleteByIdAndUserInfo_UserId(articleId, userId);
         articleRepository.flush();
 
         hashtagIds.forEach(hashtagService::deleteHashtagWithoutArticles);

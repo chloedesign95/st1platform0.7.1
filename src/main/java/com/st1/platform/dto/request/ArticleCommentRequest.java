@@ -1,7 +1,7 @@
 package com.st1.platform.dto.request;
 
 import com.st1.platform.dto.ArticleCommentDto;
-import com.st1.platform.dto.UserAccountDto;
+import com.st1.platform.dto.UserInfoDto;
 
 public record ArticleCommentRequest(
         Long articleId,
@@ -17,10 +17,10 @@ public record ArticleCommentRequest(
         return new ArticleCommentRequest(articleId, parentCommentId, content);
     }
 
-    public ArticleCommentDto toDto(UserAccountDto userAccountDto) {
+    public ArticleCommentDto toDto(UserInfoDto userInfoDto) {
         return ArticleCommentDto.of(
                 articleId,
-                userAccountDto,
+                userInfoDto,
                 parentCommentId,
                 content
         );

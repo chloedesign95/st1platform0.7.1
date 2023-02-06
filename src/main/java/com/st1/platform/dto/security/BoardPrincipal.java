@@ -1,6 +1,6 @@
 package com.st1.platform.dto.security;
 
-import com.st1.platform.dto.UserAccountDto;
+import com.st1.platform.dto.UserInfoDto;
 import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -18,15 +18,15 @@ public record BoardPrincipal(
         Collection<? extends GrantedAuthority> authorities,
         String email,
         String nickname,
-        String memo,
+        String team,
         Map<String, Object> oAuth2Attributes
 ) implements UserDetails, OAuth2User {
 
-    public static BoardPrincipal of(String username, String password, String email, String nickname, String memo) {
-        return BoardPrincipal.of(username, password, email, nickname, memo, Map.of());
+    public static BoardPrincipal of(String username, String password, String email, String nickname, String team) {
+        return BoardPrincipal.of(username, password, email, nickname, team, Map.of());
     }
 
-    public static BoardPrincipal of(String username, String password, String email, String nickname, String memo, Map<String, Object> oAuth2Attributes) {
+    public static BoardPrincipal of(String username, String password, String email, String nickname, String team, Map<String, Object> oAuth2Attributes) {
         // 지금은 인증만 하고 권한을 다루고 있지 않아서 임의로 세팅한다.
         Set<RoleType> roleTypes = Set.of(RoleType.USER);
 
@@ -40,28 +40,28 @@ public record BoardPrincipal(
                 ,
                 email,
                 nickname,
-                memo,
+                team,
                 oAuth2Attributes
         );
     }
 
-    public static BoardPrincipal from(UserAccountDto dto) {
+    public static BoardPrincipal from(UserInfoDto dto) {
         return BoardPrincipal.of(
                 dto.userId(),
                 dto.userPw(),
                 dto.email(),
                 dto.nickname(),
-                dto.memo()
+                dto.team()
         );
     }
 
-    public UserAccountDto toDto() {
-        return UserAccountDto.of(
+    public UserInfoDto toDto() {
+        return UserInfoDto.of(
                 username,
                 password,
                 email,
                 nickname,
-                memo
+                team
         );
     }
 

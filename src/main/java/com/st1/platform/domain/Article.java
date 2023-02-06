@@ -27,7 +27,7 @@ public class Article extends AuditingFields {
     @Setter
     @JoinColumn(name = "userId")
     @ManyToOne(optional = false)
-    private UserAccount userAccount; // 유저 정보 (ID)
+    private UserInfo userInfo; // 유저 정보 (ID)
 
     @Setter @Column(nullable = false) private String title; // 제목
     @Setter @Column(nullable = false, length = 10000) private String content; // 본문
@@ -50,14 +50,14 @@ public class Article extends AuditingFields {
 
     protected Article() {}
 
-    private Article(UserAccount userAccount, String title, String content) {
-        this.userAccount = userAccount;
+    private Article(UserInfo userInfo, String title, String content) {
+        this.userInfo = userInfo;
         this.title = title;
         this.content = content;
     }
 
-    public static Article of(UserAccount userAccount, String title, String content) {
-        return new Article(userAccount, title, content);
+    public static Article of(UserInfo userInfo, String title, String content) {
+        return new Article(userInfo, title, content);
     }
 
     public void addHashtag(Hashtag hashtag) {

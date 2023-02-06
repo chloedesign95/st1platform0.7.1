@@ -46,7 +46,7 @@ public class QArticleComment extends EntityPathBase<ArticleComment> {
 
     public final NumberPath<Long> parentCommentId = createNumber("parentCommentId", Long.class);
 
-    public final QUserAccount userAccount;
+    public final QUserInfo userInfo;
 
     public QArticleComment(String variable) {
         this(ArticleComment.class, forVariable(variable), INITS);
@@ -67,7 +67,7 @@ public class QArticleComment extends EntityPathBase<ArticleComment> {
     public QArticleComment(Class<? extends ArticleComment> type, PathMetadata metadata, PathInits inits) {
         super(type, metadata, inits);
         this.article = inits.isInitialized("article") ? new QArticle(forProperty("article"), inits.get("article")) : null;
-        this.userAccount = inits.isInitialized("userAccount") ? new QUserAccount(forProperty("userAccount")) : null;
+        this.userInfo = inits.isInitialized("userInfo") ? new QUserInfo(forProperty("userInfo")) : null;
     }
 
 }

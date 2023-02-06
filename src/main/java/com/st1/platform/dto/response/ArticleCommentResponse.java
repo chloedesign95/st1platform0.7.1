@@ -30,18 +30,18 @@ public record ArticleCommentResponse(
     }
 
     public static ArticleCommentResponse from(ArticleCommentDto dto) {
-        String nickname = dto.userAccountDto().nickname();
+        String nickname = dto.userInfoDto().nickname();
         if (nickname == null || nickname.isBlank()) {
-            nickname = dto.userAccountDto().userId();
+            nickname = dto.userInfoDto().userId();
         }
 
         return ArticleCommentResponse.of(
                 dto.id(),
                 dto.content(),
                 dto.createdAt(),
-                dto.userAccountDto().email(),
+                dto.userInfoDto().email(),
                 nickname,
-                dto.userAccountDto().userId(),
+                dto.userInfoDto().userId(),
                 dto.parentCommentId()
         );
     }

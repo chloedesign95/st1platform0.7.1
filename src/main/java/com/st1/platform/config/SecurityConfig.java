@@ -2,7 +2,7 @@ package com.st1.platform.config;
 
 import com.st1.platform.dto.security.BoardPrincipal;
 import com.st1.platform.dto.security.KakaoOAuth2Response;
-import com.st1.platform.service.UserAccountService;
+import com.st1.platform.service.UserInfoService;
 import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -52,8 +52,8 @@ public class SecurityConfig {
     }
 
     @Bean
-    public UserDetailsService userDetailsService(UserAccountService userAccountService) {
-        return username -> userAccountService
+    public UserDetailsService userDetailsService(UserInfoService userInfoService) {
+        return username -> userInfoService
                 .searchUser(username)
                 .map(BoardPrincipal::from)
                 .orElseThrow(() -> new UsernameNotFoundException("유저를 찾을 수 없습니다 - username: " + username));
@@ -67,13 +67,13 @@ public class SecurityConfig {
      * <p>
      * TODO: 카카오 도메인에 결합되어 있는 코드. 확장을 고려하면 별도 인증 처리 서비스 클래스로 분리하는 것이 좋지만, 현재 다른 OAuth 인증 플랫폼을 사용할 예정이 없어 이렇게 마무리한다.
      *
-     * @param userAccountService  게시판 서비스의 사용자 계정을 다루는 서비스 로직
+     * @param userInfoService  게시판 서비스의 사용자 계정을 다루는 서비스 로직
      * @param passwordEncoder 패스워드 암호화 도구
      * @return {@link OAuth2UserService} OAuth2 인증 사용자 정보를 읽어들이고 처리하는 서비스 인스턴스 반환
      */
     @Bean
     public OAuth2UserService<OAuth2UserRequest, OAuth2User> oAuth2UserService(
-            UserAccountService userAccountService,
+            UserInfoService userInfoService,
             PasswordEncoder passwordEncoder
     ) {
         final DefaultOAuth2UserService delegate = new DefaultOAuth2UserService();
@@ -87,11 +87,11 @@ public class SecurityConfig {
             String username = registrationId + "_" + providerId;
             String dummyPassword = passwordEncoder.encode("{bcrypt}" + UUID.randomUUID());
 
-            return userAccountService.searchUser(username)
+            return userInfoService.searchUser(username)
                     .map(BoardPrincipal::from)
                     .orElseGet(() ->
                             BoardPrincipal.from(
-                                    userAccountService.saveUser(
+                                    userInfoService.saveUser(
                                             username,
                                             dummyPassword,
                                             kakaoResponse.email(),

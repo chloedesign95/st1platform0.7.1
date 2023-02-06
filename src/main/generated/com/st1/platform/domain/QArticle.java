@@ -46,7 +46,7 @@ public class QArticle extends EntityPathBase<Article> {
 
     public final StringPath title = createString("title");
 
-    public final QUserAccount userAccount;
+    public final QUserInfo userInfo;
 
     public QArticle(String variable) {
         this(Article.class, forVariable(variable), INITS);
@@ -66,7 +66,7 @@ public class QArticle extends EntityPathBase<Article> {
 
     public QArticle(Class<? extends Article> type, PathMetadata metadata, PathInits inits) {
         super(type, metadata, inits);
-        this.userAccount = inits.isInitialized("userAccount") ? new QUserAccount(forProperty("userAccount")) : null;
+        this.userInfo = inits.isInitialized("userInfo") ? new QUserInfo(forProperty("userInfo")) : null;
     }
 
 }
