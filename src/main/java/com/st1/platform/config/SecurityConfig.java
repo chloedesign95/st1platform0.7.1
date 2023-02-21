@@ -22,8 +22,19 @@ import java.util.UUID;
 
 import static org.springframework.security.config.Customizer.withDefaults;
 
+//13.16
 @Configuration
+//13.14
 public class SecurityConfig {
+
+    //13.15
+    //@Bean
+    //public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+    //      return http
+    //              .authorizeHttpRequests(auth -> auth.anyRequest().permitAll())
+    //              .formLogin().and()
+    //              .build();
+    //}
 
     @Bean
     public SecurityFilterChain securityFilterChain(

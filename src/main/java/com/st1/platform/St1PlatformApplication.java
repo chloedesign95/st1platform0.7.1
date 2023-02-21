@@ -4,8 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 
-@ConfigurationPropertiesScan
-@SpringBootApplication
+/*12.3*/@ConfigurationPropertiesScan
+/*최초설정*/@SpringBootApplication
 public class St1PlatformApplication {
 
     public static void main(String[] args) {

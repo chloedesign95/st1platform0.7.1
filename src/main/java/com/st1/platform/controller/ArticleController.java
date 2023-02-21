@@ -20,42 +20,60 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * 뷰 엔드포인트 목록
+ * /articles
+ * /articles/{article-id}
+ * /articles/search
+ * /articles/search-hashtag
+ **/
+
 @RequiredArgsConstructor
-@RequestMapping("/articles")
-@Controller
+/*10.5*/@RequestMapping("/articles")
+/*10.4*/@Controller
+//10.3 : ArticleController 클래스 생성 및 작성
 public class ArticleController {
 
     private final ArticleService articleService;
     private final PaginationService paginationService;
 
-    @GetMapping
+    /*11.10*/@GetMapping
+    //11.11 : Article을 보여주는 곳을 작성
     public String articles(
             @RequestParam(required = false) SearchType searchType,
             @RequestParam(required = false) String searchValue,
             @PageableDefault(size = 10, sort = "createdAt", direction = Sort.Direction.DESC) Pageable pageable,
-            ModelMap map
+            /*11.13*/ModelMap map
     ) {
         Page<ArticleResponse> articles = articleService.searchArticles(searchType, searchValue, pageable).map(ArticleResponse::from);
         List<Integer> barNumbers = paginationService.getPaginationBarNumbers(pageable.getPageNumber(), articles.getTotalPages());
+
+        //11.14
+        //map.addAttribute ("articles", List.of());
 
         map.addAttribute("articles", articles);
         map.addAttribute("paginationBarNumbers", barNumbers);
         map.addAttribute("searchTypes", SearchType.values());
         map.addAttribute("searchTypeHashtag", SearchType.HASHTAG);
 
-        return "articles/index";
+        /*11.12*/return "articles/index";
     }
 
-    @GetMapping("/{articleId}")
+    /*12.9*/@GetMapping("/{articleId}")
+    //12.8 article의 id 에 따른 상세 게시글 보는 페이지
     public String article(@PathVariable Long articleId, ModelMap map) {
         ArticleWithCommentsResponse article = ArticleWithCommentsResponse.from(articleService.getArticleWithComments(articleId));
+
+        //12.11
+        //map.addAttribute("article", "article"); //Todo: 나중에 데이타 확인해주어야함.
+        //map.addAttribute("articleComments", List of()); // 댓글을 볼수 있고 댓글은 리스트로 본다.
 
         map.addAttribute("article", article);
         map.addAttribute("articleComments", article.articleCommentsResponse());
         map.addAttribute("totalCount", articleService.getArticleCount());
         map.addAttribute("searchTypeHashtag", SearchType.HASHTAG);
 
-        return "articles/detail";
+        /*12.10*/return "articles/detail";
     }
 
     @GetMapping("/search-hashtag")

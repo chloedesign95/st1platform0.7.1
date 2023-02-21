@@ -1,18 +1,23 @@
+#3.2 : debug는 너무 많아 사용하지않음
 debug: false
+#3.3 : Actuator에 Endpoints에 있는 모든 것을 활성화 시켜준다.
 management.endpoints.web.exposure.include: "*"
 
+#3.4 : 구체적으로 언급하고싶은 로그 레벨들을 여기서 명시한다.
 logging:
   level:
-    com.st1.platform: debug
-    org.springframework.web.servlet: debug
+    com.st1.platform : debug #루트에서 발견되는 모든 로그들은 debug 로그로 봄.
+    org.springframework.web.servlet: debug #request response 만 debug로 따로 뽑아 봄.
     org.hibernate.type.descriptor.sql.BasicBinder: trace
+    #JPA를 사용할때 query로그를 debug로그로 관찰 시
+    #Binding prameter 들은 전부 ?로 나오게되는데 이 것을 관찰할 수 있게 해준다..
 
-#8080 포트가 사용중이어서 포트를 9071로 변경함.
+#3.5 : 8080 포트가 사용중이어서 포트를 9071로 변경함.
 server:
   port: 9071
 
 spring:
-  # DB연결 및 사용 설정
+  #3.6 : DB연결 및 사용 설정
   datasource:
     url: jdbc:mariadb://59.1.39.122:1577/st1platform
     username: sogno
@@ -20,24 +25,32 @@ spring:
     driver-class-name: org.mariadb.jdbc.Driver
   # JPA + hibernate 사용 설정
   jpa:
-    open-in-view: false
-    defer-datasource-initialization: true
-    hibernate.ddl-auto: none
-    show-sql: true
-    properties:
-      hibernate.format_sql: true
-      hibernate.default_batch_fetch_size: 100
+    open-in-view: false # Todo: 나중에  추가됨.
+    #3.7 : JPA + hibernate 사용 최초 사용 설정
+    defer-datasource-initialization: false # True : 테스트용 데이타베이스 데이터를 생성할 수 있게한다. resources>data.sql
+    hibernate.ddl-auto: none #create : 테스트빌드시 Create테이블구문을 Entity를 이용해 직접 새로 생성해준다.
+    show-sql: true #true : 쿼리문을 debug로그에서 봄.
+    #3.8 : JPA구현체에 종속된 프로퍼티를 따로 추가설정할 수 있다.
+    properties: #스프링데이타JPA는 기본 구현체로 Hibernate를 사용한다.
+      hibernate.format_sql: true #한줄로나오는 debug 쿼리문을 보기좋게 포멧시켜서 보여줌
+      hibernate.default_batch_fetch_size: 100 #n+1쿼리문제해결 최대100개의 쿼리를 묶어 IDin쿼리문으로 바꿔 한번에 select문으로 바꿔준다.
       hibernate:
         naming:
           implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
           physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 
-  sql.init.mode: always
-  # data.rest  사용 설정
+  #3.9 : 테스트시에만 h2web console을 활성화함.
+  #h2.console.enabled: true         #true : h2web console을 활성화함.
+
+  #3.10 : data.sql을 언제 작동시킬 것인가?
+  sql.init.mode: always #never : 절대 작성시키지않는다. #always : 항상 작동시킨다. #Embedded : 테스트환경에서만 작동시킨다.
+
+  #8.1 : data rest 셋업  사용 설정
   data.rest:
     base-path: /api
     detection-strategy: annotated
-  # thymeleaf 디커플링
+
+  #12.4 : thymeleaf 디커플링
   thymeleaf3.decoupled-logic: true
 
 # 카카오로그인API 설정
@@ -71,9 +84,18 @@ spring:
 #  jpa.hibernate.ddl-auto: none
 #  sql.init.mode: always
 
+#3.10 :  yaml은 ---을 사용해 여러가지의 document로 나눌 수 있다.
 ---
 
-# 실험중
+#3.11 : 테스트db용 문서를 새로 만듦
+#testdb가 activate되어있을때 해당 문서를 읽는다.
 spring:
-  config.activate.on-profile: test
+#  config.activate.on-profile: testdb
+#  datasource:
+#    url: jdbc:h2:mem:board;mode=mysql
+#    driverClassName: org.h2.Driver
+#  sql.init.mode: always
+#  test.database.replace: none
+# 위가 나중에 밑부분처럼 변경됨.
+  config.activate.on-profile: testdb
   datasource.url: jdbc:h2:mem:testdb

@@ -13,12 +13,14 @@ import org.springframework.data.querydsl.binding.QuerydslBinderCustomizer;
 import org.springframework.data.querydsl.binding.QuerydslBindings;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
+//8.3 : SpringBoot RestAPI
 @RepositoryRestResource
+//5.14 : ArticleRepository Interface 생성 및 작성
 public interface ArticleRepository extends
         JpaRepository<Article, Long>,
-        ArticleRepositoryCustom,
-        QuerydslPredicateExecutor<Article>,
-        QuerydslBinderCustomizer<QArticle> {
+        /*Todo : 나중에 추가됨.*/ArticleRepositoryCustom,
+        /*Todo : 나중에 추가됨.*/QuerydslPredicateExecutor<Article>,
+        /*Todo : 나중에 추가됨.*/ QuerydslBinderCustomizer<QArticle> {
 
     Page<Article> findByTitleContaining(String title, Pageable pageable);
     Page<Article> findByContentContaining(String content, Pageable pageable);

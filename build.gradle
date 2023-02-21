@@ -19,15 +19,26 @@ repositories {
 }
 
 dependencies {
+    //0.1 : Spring Boot DevTools
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    //0.1 : Spring Boot Actuator
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    //0.1 : Spring Web
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    //0.1 : Spring Data JPA
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    //0.1 : H2 Database
+    /* 인메모리Database로 스프링부트에서 가장 많이 사용됨. */
+    runtimeOnly 'com.h2database:h2'
+    //0.1 : MariaDB Driver
+    runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
+    //0.1 : Lombok
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
     //Springdoc-openapi (Swagger) -- Spring Initializr에 없음
     implementation 'org.springdoc:springdoc-openapi-ui:1.6.12'
     implementation 'org.springdoc:springdoc-openapi-data-rest:1.6.12'
-    //Spring Boot Actuator
-    implementation 'org.springframework.boot:spring-boot-starter-actuator'
-    //Spring Web
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    //Spring Data JPA
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     //Rest Repositories
     implementation 'org.springframework.boot:spring-boot-starter-data-rest'
     //Rest Repositories HAL Explorer
@@ -41,17 +52,8 @@ dependencies {
     testImplementation 'org.springframework.security:spring-security-test'
     //Thymeleaf Extras Springsecurity5 --  Spring Initializr에 없음  (Maven)
     implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
-    //H2 Database
-    runtimeOnly 'com.h2database:h2'
-    //MariaDB
-    runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
     //PostgreSQL Driver
     runtimeOnly 'org.postgresql:postgresql'
-    //Spring Boot DevTools
-    developmentOnly 'org.springframework.boot:spring-boot-devtools'
-    //Lombok
-    compileOnly 'org.projectlombok:lombok'
-    annotationProcessor 'org.projectlombok:lombok'
     //Spring Configuration Processor
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
     //therapi-runtime-javadoc-scribe --  Spring Initializr에 없음
@@ -59,7 +61,7 @@ dependencies {
     //Starter Test (자동입력됨.)
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
-    // queryDSL 설정
+    //9.1 : queryDSL 설정
     implementation "com.querydsl:querydsl-jpa"
     implementation "com.querydsl:querydsl-core"
     implementation "com.querydsl:querydsl-collections"
@@ -73,20 +75,20 @@ tasks.named('test') {
 }
 
 
-// Querydsl 설정부
+//9.2 :  Querydsl 설정부
 def generated = 'src/main/generated'
 
-// querydsl QClass 파일 생성 위치를 지정
+//9.3 :  querydsl QClass 파일 생성 위치를 지정
 tasks.withType(JavaCompile) {
     options.getGeneratedSourceOutputDirectory().set(file(generated))
 }
 
-// java source set 에 querydsl QClass 위치 추가
+//9.4 :  java source set 에 querydsl QClass 위치 추가
 sourceSets {
     main.java.srcDirs += [ generated ]
 }
 
-// gradle clean 시에 QClass 디렉토리 삭제
+//9.5 :  gradle clean 시에 QClass 디렉토리 삭제
 clean {
     delete file(generated)
 }

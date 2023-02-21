@@ -12,11 +12,13 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import java.util.List;
 
+//8.2 : : SpringBoot RestAPI
 @RepositoryRestResource
+//5.15 : ArticleCommentRepository Interface 생성 및 작성
 public interface ArticleCommentRepository extends
-        JpaRepository<ArticleComment, Long>,
-        QuerydslPredicateExecutor<ArticleComment>,
-        QuerydslBinderCustomizer<QArticleComment> {
+        /*Todo : 나중에 추가됨.*/JpaRepository<ArticleComment, Long>,
+        /*Todo : 나중에 추가됨.*/QuerydslPredicateExecutor<ArticleComment>,
+        /*Todo : 나중에 추가됨.*/QuerydslBinderCustomizer<QArticleComment> {
 
     List<ArticleComment> findByArticle_Id(Long articleId);
     void deleteByIdAndUserInfo_UserId(Long articleCommentId, String userId);

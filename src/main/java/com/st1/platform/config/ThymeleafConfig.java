@@ -8,6 +8,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
 
+//12.2 : 타임리프 설정 적용
+// https://gist.github.com/djkeh/6e1d557ce8c466135b1541d342b1c25c ← 예제 코드를 긁어와서 사용.
 @Configuration
 public class ThymeleafConfig {
 

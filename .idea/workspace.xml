@@ -5,152 +5,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b155a44-8d8e-492e-98be-86a0b233662e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/st1/platform/repository/UserInfoRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/st1/platform/service/UserInfoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/bootJarMainClassName" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/META-INF/spring-configuration-metadata.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/St1PlatformApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/config/DataRestConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/config/JpaConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/config/SecurityConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/config/SecurityConfig__Javadoc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/config/ThymeleafConfig$Thymeleaf3Properties.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/config/ThymeleafConfig$Thymeleaf3Properties__Javadoc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/config/ThymeleafConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/controller/ArticleCommentController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/controller/ArticleController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/controller/MainController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/domain/Article.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/domain/ArticleComment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/domain/AuditingFields.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/domain/Hashtag.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/domain/QArticle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/domain/QArticleComment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/domain/QArticleComment__Javadoc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/domain/QArticle__Javadoc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/domain/QAuditingFields.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/domain/QAuditingFields__Javadoc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/domain/QHashtag.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/domain/QHashtag__Javadoc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/domain/QUserAccount.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/domain/QUserAccount__Javadoc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/domain/UserAccount.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/domain/constant/FormStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/domain/constant/SearchType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/dto/ArticleCommentDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/dto/ArticleDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/dto/ArticleWithCommentsDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/dto/HashtagDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/dto/HashtagWithArticlesDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/dto/UserAccountDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/dto/request/ArticleCommentRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/dto/request/ArticleRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/dto/response/ArticleCommentResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/dto/response/ArticleResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/dto/response/ArticleWithCommentsResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/dto/security/BoardPrincipal$RoleType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/dto/security/BoardPrincipal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/dto/security/KakaoOAuth2Response$KakaoAccount$Profile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/dto/security/KakaoOAuth2Response$KakaoAccount.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/dto/security/KakaoOAuth2Response.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/repository/ArticleCommentRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/repository/ArticleRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/repository/HashtagRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/repository/UserAccountRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/repository/querydsl/ArticleRepositoryCustom.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/repository/querydsl/ArticleRepositoryCustomImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/repository/querydsl/ArticleRepositoryCustom__Javadoc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/repository/querydsl/HashtagRepositoryCustom.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/repository/querydsl/HashtagRepositoryCustomImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/service/ArticleCommentService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/service/ArticleService$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/service/ArticleService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/service/HashtagService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/service/PaginationService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/st1/platform/service/UserAccountService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/st1platform0.7.1-v1.1-plain.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/st1platform0.7.1-v1.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/application.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/articles/article-content.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/articles/table-header.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/search-bar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/images/kakao_login_medium.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/articles/detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/articles/detail.th.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/articles/form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/articles/form.th.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/articles/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/articles/index.th.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/articles/search-hashtag.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/articles/search-hashtag.th.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/footer.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/header.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/header.th.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/sign-up.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/bootJar/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/config/DataRestConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/st1/platform/config/DataRestConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/st1/platform/config/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/config/SecurityConfig__Javadoc.json" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/st1/platform/config/SecurityConfig__Javadoc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/controller/ArticleCommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/st1/platform/controller/ArticleCommentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/config/JpaConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/st1/platform/config/JpaConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/config/ThymeleafConfig$Thymeleaf3Properties.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/st1/platform/config/ThymeleafConfig$Thymeleaf3Properties.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/config/ThymeleafConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/st1/platform/config/ThymeleafConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/controller/ArticleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/st1/platform/controller/ArticleController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/domain/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/st1/platform/domain/Article.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/domain/ArticleComment.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/st1/platform/domain/ArticleComment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/domain/QArticle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/st1/platform/domain/QArticle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/domain/QArticleComment.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/st1/platform/domain/QArticleComment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/domain/UserAccount.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/dto/ArticleCommentDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/st1/platform/dto/ArticleCommentDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/dto/ArticleDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/st1/platform/dto/ArticleDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/dto/ArticleWithCommentsDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/st1/platform/dto/ArticleWithCommentsDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/dto/UserAccountDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/dto/request/ArticleCommentRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/st1/platform/dto/request/ArticleCommentRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/dto/request/ArticleRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/st1/platform/dto/request/ArticleRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/dto/response/ArticleCommentResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/st1/platform/dto/response/ArticleCommentResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/dto/response/ArticleResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/st1/platform/dto/response/ArticleResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/dto/response/ArticleWithCommentsResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/st1/platform/dto/response/ArticleWithCommentsResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/dto/security/BoardPrincipal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/st1/platform/dto/security/BoardPrincipal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/domain/AuditingFields.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/st1/platform/domain/AuditingFields.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/domain/QUserAccount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/domain/QUserAccount__Javadoc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/domain/UserInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/st1/platform/domain/UserInfo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/repository/ArticleCommentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/st1/platform/repository/ArticleCommentRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/repository/ArticleRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/st1/platform/repository/ArticleRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/repository/UserAccountRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/service/ArticleCommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/st1/platform/service/ArticleCommentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/service/ArticleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/st1/platform/service/ArticleService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/service/UserAccountService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/header.th.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/header.th.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/generated/com/st1/platform/domain/QArticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/generated/com/st1/platform/domain/QArticle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/generated/com/st1/platform/domain/QArticleComment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/generated/com/st1/platform/domain/QArticleComment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/generated/com/st1/platform/domain/QUserAccount.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/st1/platform/config/DataRestConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st1/platform/config/DataRestConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/articles/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/articles/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/articles/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/articles/form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/articles/form.th.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/articles/form.th.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/articles/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/articles/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/articles/index.th.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/articles/index.th.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/st1/platform/St1PlatformApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st1/platform/St1PlatformApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/st1/platform/config/JpaConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st1/platform/config/JpaConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/st1/platform/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st1/platform/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/st1/platform/config/ThymeleafConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st1/platform/config/ThymeleafConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/st1/platform/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st1/platform/controller/ArticleController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/st1/platform/domain/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st1/platform/domain/Article.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/st1/platform/domain/ArticleComment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st1/platform/domain/ArticleComment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/st1/platform/domain/UserAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st1/platform/domain/UserInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/st1/platform/dto/ArticleCommentDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st1/platform/dto/ArticleCommentDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/st1/platform/dto/ArticleDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st1/platform/dto/ArticleDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/st1/platform/dto/ArticleWithCommentsDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st1/platform/dto/ArticleWithCommentsDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/st1/platform/dto/UserAccountDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st1/platform/dto/UserInfoDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/st1/platform/dto/request/ArticleCommentRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st1/platform/dto/request/ArticleCommentRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/st1/platform/dto/request/ArticleRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st1/platform/dto/request/ArticleRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/st1/platform/dto/response/ArticleCommentResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st1/platform/dto/response/ArticleCommentResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/st1/platform/dto/response/ArticleResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st1/platform/dto/response/ArticleResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/st1/platform/dto/response/ArticleWithCommentsResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st1/platform/dto/response/ArticleWithCommentsResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/st1/platform/dto/security/BoardPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st1/platform/dto/security/BoardPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/st1/platform/domain/AuditingFields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st1/platform/domain/AuditingFields.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/st1/platform/domain/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st1/platform/domain/UserInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/st1/platform/repository/ArticleCommentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st1/platform/repository/ArticleCommentRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/st1/platform/repository/ArticleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st1/platform/repository/ArticleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/st1/platform/repository/UserAccountRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/st1/platform/service/ArticleCommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st1/platform/service/ArticleCommentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/st1/platform/repository/UserInfoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st1/platform/repository/UserInfoRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/st1/platform/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st1/platform/service/ArticleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/st1/platform/service/UserAccountService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/header.th.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/header.th.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/articles/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/articles/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/articles/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/articles/form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/articles/form.th.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/articles/form.th.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/articles/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/articles/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/articles/index.th.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/articles/index.th.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -196,6 +97,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -224,7 +128,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;,
     &quot;settings.editor.splitter.proportion&quot;: &quot;0.16689189&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;663cad9298488c04e68fdd0570696a93&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -239,6 +143,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.st1.platform.domain.auditing" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
@@ -248,7 +155,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.st1platform0.7.1 [clean]">
+  <component name="RunManager" selected="Application.St1PlatformApplication">
     <configuration name="St1PlatformApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.st1.platform.St1PlatformApplication" />
       <module name="st1platform0.7.1.main" />
@@ -400,5 +307,8 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/st1platform0_7_1$st1platform0_7_1__clean_.ic" NAME="st1platform0.7.1 [clean] Coverage Results" MODIFIED="1676618989253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
