@@ -67,7 +67,7 @@ public class ArticleComment /*7.18 : AuditingFields에 내용을 가져와 연�
     //@LastModifiedDate @Column(nullable = false) private LocalDateTime modifiedAt;
     //@LastModifiedBy @Column(nullable = false, length = 100) private String modifiedBy;
 
-    //5.7 : Article.class를 참고하여 밑에 내용을 추가
+    //5.7 : Article.class를 참고하여 밑에 내용을 추가.
     protected ArticleComment() {
     }
 

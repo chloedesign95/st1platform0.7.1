@@ -7,24 +7,15 @@
     <list default="true" id="3b155a44-8d8e-492e-98be-86a0b233662e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/config/JpaConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/st1/platform/config/JpaConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/config/ThymeleafConfig$Thymeleaf3Properties.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/st1/platform/config/ThymeleafConfig$Thymeleaf3Properties.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/config/ThymeleafConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/st1/platform/config/ThymeleafConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/controller/ArticleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/st1/platform/controller/ArticleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/domain/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/st1/platform/domain/Article.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/domain/ArticleComment.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/st1/platform/domain/ArticleComment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/domain/AuditingFields.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/st1/platform/domain/AuditingFields.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/domain/QUserAccount.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/domain/QUserAccount__Javadoc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/domain/UserInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/st1/platform/domain/UserInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/repository/ArticleCommentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/st1/platform/repository/ArticleCommentRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/com/st1/platform/repository/ArticleRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/st1/platform/repository/ArticleRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/resources/templates/articles/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/articles/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/articles/detail.th.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/articles/detail.th.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/resources/templates/articles/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/articles/form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/articles/form.th.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/articles/form.th.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/resources/templates/articles/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/articles/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/resources/templates/articles/index.th.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/articles/index.th.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/header.th.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/header.th.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/st1/platform/St1PlatformApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st1/platform/St1PlatformApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/st1/platform/config/JpaConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st1/platform/config/JpaConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/st1/platform/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st1/platform/config/SecurityConfig.java" afterDir="false" />
@@ -40,10 +31,13 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/st1/platform/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/st1/platform/service/ArticleService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/articles/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/articles/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/articles/detail.th.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/articles/detail.th.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/articles/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/articles/form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/articles/form.th.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/articles/form.th.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/articles/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/articles/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/articles/index.th.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/articles/index.th.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/header.th.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/header.th.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +122,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;settings.editor.splitter.proportion&quot;: &quot;0.16689189&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;663cad9298488c04e68fdd0570696a93&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;

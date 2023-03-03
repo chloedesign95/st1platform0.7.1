@@ -15,7 +15,7 @@ import java.util.Optional;
 //       JPA Auditing 기술 사용으로 Meta data 항목을 자동으로 셋팅되게끔 한다.
 @EnableJpaAuditing
 //4.12 : @Configuration으로 JpaConfig은 Configuration Bean 이 된다.
-//       각종 설정을 잡을때 사용하게 된다.
+//       각종 설정을 잡을때 사용하게 된다
 @Configuration
 //4.11 :  JpaConfig 클래스 생성 및 작성
 public class JpaConfig {

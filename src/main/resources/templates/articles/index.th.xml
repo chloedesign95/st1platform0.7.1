@@ -40,7 +40,7 @@
             searchType=${param.searchType},
             searchValue=${param.searchValue}
         )}"/>
-        <!--리스트 헤더 정렬기능 (작성일) -->
+        <!--리스트 헤더 정렬기능 (작성일). -->
         <attr sel="th.created-at/a" th:text="'접수일'" th:href="@{/articles(
             page=${articles.number},
             sort='createdAt' + (*{sort.getOrderFor('createdAt')} != null ? (*{sort.getOrderFor('createdAt').direction.name} != 'DESC' ? ',desc' : '') : ''),

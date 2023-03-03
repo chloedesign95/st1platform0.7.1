@@ -22,7 +22,7 @@ import java.util.UUID;
 
 import static org.springframework.security.config.Customizer.withDefaults;
 
-//13.16
+//13.16 :
 @Configuration
 //13.14
 public class SecurityConfig {

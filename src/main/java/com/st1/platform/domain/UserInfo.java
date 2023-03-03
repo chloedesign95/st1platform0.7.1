@@ -34,7 +34,7 @@ public class UserInfo extends AuditingFields {
     @Setter @Column(name = "Team") private String team; //소속
 
 
-    //13.6
+    //13.6 :
     protected UserInfo() {}
 
     //13.7

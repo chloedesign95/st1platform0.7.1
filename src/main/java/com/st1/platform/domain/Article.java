@@ -42,7 +42,7 @@ public class Article /*7.15 : AuditingFields에 내용을 가져와 연결*/ ext
     private Long id; // AS접수 (JPApersistance가 영속성을할때 자동으로 만들어주는 고유번호)
 
     @Setter
-    @JoinColumn(name = "userId") //회원정보 테이블을 연결해준다.
+    @JoinColumn(name = "userId") //회원정보 테이블을 연결해준다
     @ManyToOne(optional = false)
     private UserInfo userInfo; // 유저 정보 (ID)
 

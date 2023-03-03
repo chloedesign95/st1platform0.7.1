@@ -38,7 +38,7 @@ public class ArticleController {
     private final PaginationService paginationService;
 
     /*11.10*/@GetMapping
-    //11.11 : Article을 보여주는 곳을 작성
+    //11.11 : Article을 보여주는 곳을 작성.
     public String articles(
             @RequestParam(required = false) SearchType searchType,
             @RequestParam(required = false) String searchValue,

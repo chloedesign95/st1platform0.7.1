@@ -33,7 +33,7 @@ public abstract class AuditingFields {
     @Column(nullable = false, updatable = false) //7.13 :  updatable = false 이 필드는 최초한번 셋팅 이후 업데이트가 불가하다.
     protected LocalDateTime createdAt;
 
-    //7.5 : 생성자
+    //7.5 : 생성자.
     @CreatedBy
     @Column(nullable = false, updatable = false, length = 100) //7.14 :  updatable = false 이 필드는 최초한번 셋팅 이후 업데이트가 불가하다.
     protected String createdBy;

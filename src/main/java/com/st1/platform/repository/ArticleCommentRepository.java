@@ -14,7 +14,7 @@ import java.util.List;
 
 //8.2 : : SpringBoot RestAPI
 @RepositoryRestResource
-//5.15 : ArticleCommentRepository Interface 생성 및 작성
+//5.15 : ArticleCommentRepository Interface 생성 및 작성.
 public interface ArticleCommentRepository extends
         /*Todo : 나중에 추가됨.*/JpaRepository<ArticleComment, Long>,
         /*Todo : 나중에 추가됨.*/QuerydslPredicateExecutor<ArticleComment>,

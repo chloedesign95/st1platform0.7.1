@@ -3,7 +3,7 @@ debug: false
 #3.3 : Actuator에 Endpoints에 있는 모든 것을 활성화 시켜준다.
 management.endpoints.web.exposure.include: "*"
 
-#3.4 : 구체적으로 언급하고싶은 로그 레벨들을 여기서 명시한다.
+#3.4 : 구체적으로 언급하고싶은 로그 레벨들을 여기서 명시한다
 logging:
   level:
     com.st1.platform : debug #루트에서 발견되는 모든 로그들은 debug 로그로 봄.

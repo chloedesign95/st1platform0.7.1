@@ -15,7 +15,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 //8.3 : SpringBoot RestAPI
 @RepositoryRestResource
-//5.14 : ArticleRepository Interface 생성 및 작성
+//5.14 : ArticleRepository Interface 생성 및 작성.
 public interface ArticleRepository extends
         JpaRepository<Article, Long>,
         /*Todo : 나중에 추가됨.*/ArticleRepositoryCustom,

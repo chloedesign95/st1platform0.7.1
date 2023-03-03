@@ -23,12 +23,14 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 @Slf4j
+/*1.5*/
 @RequiredArgsConstructor
 @Transactional
 /*1.4*/@Service
-//1.3 ArticleService 생성 및 작성
+//1.3 ArticleService 생성 및 작성.
 public class ArticleService {
 
+    /*1.6*/
     private final HashtagService hashtagService;
     private final ArticleRepository articleRepository;
     private final UserInfoRepository userInfoRepository;
