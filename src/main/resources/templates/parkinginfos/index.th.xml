@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<!--Pi 1.16-->
+<thlogic>
+  <!--Pi 1.17 헤더와 푸터를 붙인다.-->
+  <attr sel="#header" th:replace="header :: header" />
+  <attr sel="#footer" th:replace="footer :: footer" />
+</thlogic>
